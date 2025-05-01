@@ -26,14 +26,7 @@ export default function FindLawyer() {
 
 
 
-  useEffect(() => {
-    delete L.Icon.Default.prototype._getIconUrl;
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl: markerIcon2x,
-      iconUrl: markerIcon,
-      shadowUrl: markerShadow,
-    });
-  }, []);
+  
 
   // Mock data for lawyers
   const lawyers = [
@@ -319,28 +312,7 @@ export default function FindLawyer() {
               )}
             </TabsContent>
             
-            <TabsContent value="map">
-  <div className="bg-slate-200 rounded-lg p-4 h-[400px]">
-    <MapContainer
-      center={[28.6139, 77.2090]} // Default center (e.g., New Delhi)
-      zoom={10}
-      className="h-full w-full rounded-lg"
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&copy; OpenStreetMap contributors"
-      />
-      
-      {/* Example Markers */}
-      <Marker position={[28.6139, 77.2090]}>
-        <Popup>New Delhi Attorney Office</Popup>
-      </Marker>
-      <Marker position={[28.4595, 77.0266]}>
-        <Popup>Gurgaon Legal Aid</Popup>
-      </Marker>
-    </MapContainer>
-  </div>
-</TabsContent>
+            
           </Tabs>
 
           <div className="mt-12 bg-white p-6 rounded-lg border border-slate-200">
