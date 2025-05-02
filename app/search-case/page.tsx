@@ -915,6 +915,7 @@ export default function SearchCase() {
             </div>
           ) : searchQuery ? (
             <div className="text-center py-12 max-w-2xl mx-auto">
+               <h3 className="text-xl font-semibold mb-2">Please serach again</h3>
               <AlertTriangle className="h-12 w-12 text-amber-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">No specific legal information found</h3>
               <p className="text-slate-600 mb-6">
@@ -924,11 +925,10 @@ export default function SearchCase() {
               <div className="bg-slate-100 p-4 rounded-lg text-left mb-6">
                 <h4 className="font-medium mb-2">Try searching for specific issues like:</h4>
                 <ul className="list-disc pl-5 space-y-1 text-slate-700">
-                  <li>"boundary dispute with neighbor"</li>
-                  <li>"tenant not paying rent"</li>
-                  <li>"HOA covenant violation"</li>
-                  <li>"zoning variance request"</li>
-                  <li>"property easement rights"</li>
+                  <li>"property dispute with neighbor"</li>
+                  <li>"someone copying my idea"</li>
+                  <li>"family related diputes"</li>
+                  <li>"acccount freeze problem"</li>
                 </ul>
               </div>
               <Button onClick={() => setSearchQuery("")}>Try a New Search</Button>
