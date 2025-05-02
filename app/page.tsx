@@ -10,6 +10,7 @@ import { Search, Calendar } from "lucide-react"
 // import {bg.jpg} from "public\images"
 
 export default function Home() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-slate-900 text-white py-4">
@@ -42,7 +43,7 @@ export default function Home() {
               </Link>
               
             </nav>
-            <Button variant="outline" className="md:hidden" size="icon">
+            <Button variant="outline" className="md:hidden" size="icon" onClick={() => setShowMobileMenu(prev => !prev)}>
               <span className="sr-only">Menu</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +62,16 @@ export default function Home() {
                 <line x1="4" x2="20" y1="18" y2="18" />
               </svg>
             </Button>
+            {showMobileMenu && (
+  <div className="md:hidden bg-slate-800 text-white px-4 py-4 space-y-4">
+    <Link href="/" className="block hover:text-slate-300 font-medium">Home</Link>
+    <Link href="/search-case" className="block hover:text-slate-300 font-medium">Search Your Case</Link>
+    <Link href="/defend-yourself" className="block hover:text-slate-300 font-medium">Defend Yourself</Link>
+    <Link href="/find-lawyer" className="block hover:text-slate-300 font-medium">Find a Lawyer</Link>
+    <Link href="/cases" className="block hover:text-slate-300 font-medium">Previous Cases</Link>
+    <Link href="/trademark" className="block hover:text-slate-300 font-medium">Trademark Search</Link>
+  </div>
+)}
           </div>
         </div>
       </header>
