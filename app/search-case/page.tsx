@@ -777,7 +777,7 @@ export default function SearchCase() {
                 <Search className="absolute left-3 top-3 h-5 w-5 text-slate-400" />
                 <Input
                   type="text"
-                  placeholder="Describe your property issue (e.g., 'boundary dispute with neighbor' or 'tenant not paying rent')"
+                  placeholder="Describe your property issue (e.g., 'Property dispute with someone' or 'copyright')"
                   className="pl-10 bg-white text-slate-900 py-6 text-lg"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -797,8 +797,7 @@ export default function SearchCase() {
               </Button>
             </div>
             <p className="text-slate-300 text-sm mt-2">
-              Try searching for specific issues like "fence dispute," "security deposit," "HOA covenant," or "zoning
-              variance"
+              Try searching for specific issues like "family dispute," "trademark," "property," or "account related"
             </p>
           </div>
         </div>
@@ -949,52 +948,43 @@ export default function SearchCase() {
                     variant="outline"
                     size="sm"
                     onClick={() => {
-                      setSearchQuery("boundary fence dispute with neighbor")
+                      setSearchQuery("Property related issue")
                       handleSearch()
                     }}
                   >
-                    Boundary Disputes
+                    Property Disputes
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => {
-                      setSearchQuery("security deposit not returned by landlord")
+                      setSearchQuery("Someone copying my idea ")
                       handleSearch()
                     }}
                   >
-                    Security Deposits
+                    Copying or copyright
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => {
-                      setSearchQuery("HOA covenant violation notice")
+                      setSearchQuery("Family related disputes")
                       handleSearch()
                     }}
                   >
-                    HOA Issues
+                    Family Issues
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => {
-                      setSearchQuery("zoning variance for home addition")
+                      setSearchQuery("Account got freezed what to do")
                       handleSearch()
                     }}
                   >
-                    Zoning Problems
+                    Account freezing Problems
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => {
-                      setSearchQuery("easement on my property")
-                      handleSearch()
-                    }}
-                  >
-                    Easements
-                  </Button>
+                  
                 </div>
               </div>
             </div>
